@@ -31,9 +31,8 @@ def shared_header_catchall(path):
     return flask.render_template('shared-header/' + path)
 
 if __name__ == '__main__':
-    #parser = argparse.ArgumentParser('A sample Flask application demonstrating templates.')
-    #parser.add_argument('host', help='the host on which this application is running')
-    #parser.add_argument('port', type=int, help='the port on which this application is listening')
-    #arguments = parser.parse_args()
-    app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER_PORT"), debug=True)
-    #app.run(host=arguments.host, port=arguments.port, debug=True)
+    parser = argparse.ArgumentParser('A sample Flask application demonstrating templates.')
+    parser.add_argument('host', help='the host on which this application is running')
+    parser.add_argument('port', type=int, help='the port on which this application is listening')
+    arguments = parser.parse_args()
+    app.run(host=arguments.host, port=arguments.port, debug=True)

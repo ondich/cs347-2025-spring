@@ -26,6 +26,5 @@ RUN export FLASK_APP=app.py
 RUN pip install -r requirements.txt
 
 # define the port number the container should expose
-EXPOSE 5000
-CMD ["python3", "app.py"]
+CMD ["python3", "app.py", "0.0.0.0", "5000"]
 
